@@ -52,9 +52,9 @@ nav li{
     display: flex;
     align-items: center;
 }
-.personal img{
+/* .personal img{
     width: 100%;
-}
+} */
 .banner-title{
     font-size: 85px;
     font-weight: 700;
@@ -246,7 +246,7 @@ section{
     background-color: #FFF8F3;
     padding: 130px 200px;
 }
-.contact,.section-title{
+.contact{
    text-align: left;
 }
 
@@ -270,24 +270,50 @@ input{
 
 /* for small device */
 @media screen and (max-width:576px) {
-    .skills-container{
+    .header{
+        background-image: none;
+    }
+    nav,
+    .banner,
+    .skills-container,
+    .resume-content,
+    .about-info-container,
+    .contact
+    {
         flex-direction: column;
-        
+        gap: 20px;
+        padding: 10px 20px;
     }
-    .section-title{
-        margin-left: 20px;
+    .about,.contact{
+        padding: 20px;
     }
-    .skill-description,.what-description{
-        margin-right:  70%;
-        text-align: justify;
-    }
+    .contact input[type="text"],
+        input[type="email"],
+        textarea {
+         padding: 0 0 0 5px;
+    
+        }
+
     
     
 }
 
 /* for medium device */
 @media screen and (min-width:577px) and (max-width:992px) {
+    .about,
+    .contact {
+            padding: 20px;
+     }
+     .contact{
+        flex-direction: column;
+     }
+
+    .contact input[type="text"],
+    input[type="email"],
+    textarea {
+             padding: 0 0 0 5px;
     
+         }
 }
 
 
